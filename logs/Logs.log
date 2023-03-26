@@ -1,0 +1,495 @@
+[2023-03-26 13:16:12,407] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [INFO ] Starting SpringSecurityApplication using Java 17.0.1 with PID 21380 (C:\Users\danie\Documents\Daniel_Diniz\java\prof-isidro\springSecurity\target\classes started by danie in C:\Users\danie\Documents\Daniel_Diniz\java\prof-isidro\springSecurity)
+[2023-03-26 13:16:12,412] [org.springframework.boot.SpringApplication] [restartedMain] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-26 13:16:12,492] [org.springframework.boot.logging.DeferredLog] [restartedMain] [250] [INFO ] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-03-26 13:16:12,494] [org.springframework.boot.logging.DeferredLog] [restartedMain] [250] [INFO ] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-03-26 13:16:13,894] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-03-26 13:16:13,961] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [208] [INFO ] Finished Spring Data repository scanning in 24 ms. Found 0 JPA repository interfaces.
+[2023-03-26 13:16:15,032] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [108] [INFO ] Tomcat initialized with port(s): 8080 (http)
+[2023-03-26 13:16:15,048] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing ProtocolHandler ["http-nio-8080"]
+[2023-03-26 13:16:15,049] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2023-03-26 13:16:15,049] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.7]
+[2023-03-26 13:16:15,127] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2023-03-26 13:16:15,128] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [291] [INFO ] Root WebApplicationContext: initialization completed in 2630 ms
+[2023-03-26 13:16:15,232] [com.zaxxer.hikari.HikariConfig] [restartedMain] [484] [ERROR] Failed to load driver class com.mysql.cj.jdbc.Driver from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa
+[2023-03-26 13:16:15,237] [org.springframework.context.support.AbstractApplicationContext] [restartedMain] [592] [WARN ] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+[2023-03-26 13:16:15,243] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Stopping service [Tomcat]
+[2023-03-26 13:16:15,269] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] [restartedMain] [82] [INFO ] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2023-03-26 13:16:15,312] [org.springframework.boot.SpringApplication] [restartedMain] [822] [ERROR] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:548)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at br.com.training.springSecurity.SpringSecurityApplication.main(SpringSecurityApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 40 common frames omitted
+Caused by: java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at com.zaxxer.hikari.HikariConfig.setDriverClassName(HikariConfig.java:488)
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperty.set(DataSourceBuilder.java:479)
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.set(DataSourceBuilder.java:373)
+	at org.springframework.boot.jdbc.DataSourceBuilder.build(DataSourceBuilder.java:183)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:48)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:90)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
+	... 41 common frames omitted
+[2023-03-26 13:21:24,350] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [INFO ] Starting SpringSecurityApplication using Java 17.0.1 with PID 16208 (C:\Users\danie\Documents\Daniel_Diniz\java\prof-isidro\springSecurity\target\classes started by danie in C:\Users\danie\Documents\Daniel_Diniz\java\prof-isidro\springSecurity)
+[2023-03-26 13:21:24,356] [org.springframework.boot.SpringApplication] [restartedMain] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-26 13:21:24,489] [org.springframework.boot.logging.DeferredLog] [restartedMain] [250] [INFO ] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-03-26 13:21:24,490] [org.springframework.boot.logging.DeferredLog] [restartedMain] [250] [INFO ] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-03-26 13:21:25,937] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-03-26 13:21:25,986] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [208] [INFO ] Finished Spring Data repository scanning in 28 ms. Found 0 JPA repository interfaces.
+[2023-03-26 13:21:27,267] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [108] [INFO ] Tomcat initialized with port(s): 8080 (http)
+[2023-03-26 13:21:27,288] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing ProtocolHandler ["http-nio-8080"]
+[2023-03-26 13:21:27,289] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2023-03-26 13:21:27,290] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.7]
+[2023-03-26 13:21:27,404] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2023-03-26 13:21:27,404] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [291] [INFO ] Root WebApplicationContext: initialization completed in 2912 ms
+[2023-03-26 13:21:27,787] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-03-26 13:21:27,907] [org.hibernate.Version] [restartedMain] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-03-26 13:21:28,415] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-26 13:21:29,043] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@668ef618
+[2023-03-26 13:21:29,046] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-26 13:21:29,113] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-03-26 13:21:29,686] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-26 13:21:29,716] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-26 13:21:29,814] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [231] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-03-26 13:21:30,557] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] [restartedMain] [87] [WARN ] 
+
+Using generated security password: e244d4d6-de68-43c7-b5c7-98586fd2f538
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2023-03-26 13:21:30,795] [org.springframework.security.web.DefaultSecurityFilterChain] [restartedMain] [54] [INFO ] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@76030b71, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e1983b4, org.springframework.security.web.context.SecurityContextHolderFilter@275ff335, org.springframework.security.web.header.HeaderWriterFilter@5aad81a, org.springframework.security.web.csrf.CsrfFilter@62993ad4, org.springframework.security.web.authentication.logout.LogoutFilter@134ee738, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2b553278, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@33eab71, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1f3f1880, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5705ece1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ccd69b7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d738b7c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@355d0efc, org.springframework.security.web.access.ExceptionTranslationFilter@3ac10ee6, org.springframework.security.web.access.intercept.AuthorizationFilter@23828a4d]
+[2023-03-26 13:21:30,894] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2023-03-26 13:21:30,915] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting ProtocolHandler ["http-nio-8080"]
+[2023-03-26 13:21:30,955] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [220] [INFO ] Tomcat started on port(s): 8080 (http) with context path ''
+[2023-03-26 13:21:30,972] [org.springframework.boot.StartupInfoLogger] [restartedMain] [57] [INFO ] Started SpringSecurityApplication in 7.289 seconds (process running for 9.579)
+[2023-03-26 13:41:36,477] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-26 13:41:36,538] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-26 13:41:36,582] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-26 17:30:09,572] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [INFO ] Starting SpringSecurityApplication using Java 17.0.1 with PID 26980 (C:\Users\danie\Documents\Daniel_Diniz\java\prof-isidro\springSecurity\target\classes started by danie in C:\Users\danie\Documents\Daniel_Diniz\java\prof-isidro\springSecurity)
+[2023-03-26 17:30:09,580] [org.springframework.boot.SpringApplication] [restartedMain] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-26 17:30:09,776] [org.springframework.boot.logging.DeferredLog] [restartedMain] [250] [INFO ] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-03-26 17:30:09,781] [org.springframework.boot.logging.DeferredLog] [restartedMain] [250] [INFO ] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-03-26 17:30:11,596] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-03-26 17:30:11,644] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [208] [INFO ] Finished Spring Data repository scanning in 29 ms. Found 0 JPA repository interfaces.
+[2023-03-26 17:30:12,964] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [108] [INFO ] Tomcat initialized with port(s): 8080 (http)
+[2023-03-26 17:30:12,986] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing ProtocolHandler ["http-nio-8080"]
+[2023-03-26 17:30:12,988] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2023-03-26 17:30:12,988] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.7]
+[2023-03-26 17:30:13,105] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2023-03-26 17:30:13,107] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [291] [INFO ] Root WebApplicationContext: initialization completed in 3320 ms
+[2023-03-26 17:30:13,438] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-03-26 17:30:13,534] [org.hibernate.Version] [restartedMain] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-03-26 17:30:13,897] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-26 17:30:14,426] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24a065ff
+[2023-03-26 17:30:14,429] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-26 17:30:14,492] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-03-26 17:30:15,069] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-26 17:30:15,088] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-26 17:30:15,167] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [231] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-03-26 17:30:15,823] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] [restartedMain] [87] [WARN ] 
+
+Using generated security password: 02e64ba0-8fb9-424e-8b16-011eedbf36ad
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2023-03-26 17:30:16,028] [org.springframework.security.web.DefaultSecurityFilterChain] [restartedMain] [54] [INFO ] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5e09b732, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26277f8, org.springframework.security.web.context.SecurityContextHolderFilter@76030b71, org.springframework.security.web.header.HeaderWriterFilter@5705ece1, org.springframework.security.web.csrf.CsrfFilter@5086ea09, org.springframework.security.web.authentication.logout.LogoutFilter@1dd632b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@41d630f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@33ded5f6, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@37055c27, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7a94c477, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1f3f1880, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e310ff2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20cf1da9, org.springframework.security.web.access.ExceptionTranslationFilter@53269750, org.springframework.security.web.access.intercept.AuthorizationFilter@23563114]
+[2023-03-26 17:30:16,111] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2023-03-26 17:30:16,137] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting ProtocolHandler ["http-nio-8080"]
+[2023-03-26 17:30:16,175] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [220] [INFO ] Tomcat started on port(s): 8080 (http) with context path ''
+[2023-03-26 17:30:16,190] [org.springframework.boot.StartupInfoLogger] [restartedMain] [57] [INFO ] Started SpringSecurityApplication in 8.379 seconds (process running for 11.872)
+[2023-03-26 17:47:05,391] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-26 17:47:05,401] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-26 17:47:05,411] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-26 18:28:50,766] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [INFO ] Starting SpringSecurityApplication using Java 17.0.1 with PID 21104 (C:\Users\danie\Documents\Daniel_Diniz\java\prof-isidro\springSecurity\target\classes started by danie in C:\Users\danie\Documents\Daniel_Diniz\java\prof-isidro\springSecurity)
+[2023-03-26 18:28:50,770] [org.springframework.boot.SpringApplication] [restartedMain] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-26 18:28:50,851] [org.springframework.boot.logging.DeferredLog] [restartedMain] [250] [INFO ] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-03-26 18:28:50,851] [org.springframework.boot.logging.DeferredLog] [restartedMain] [250] [INFO ] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-03-26 18:28:51,945] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-03-26 18:28:51,994] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [208] [INFO ] Finished Spring Data repository scanning in 34 ms. Found 0 JPA repository interfaces.
+[2023-03-26 18:28:53,005] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [108] [INFO ] Tomcat initialized with port(s): 8080 (http)
+[2023-03-26 18:28:53,017] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing ProtocolHandler ["http-nio-8080"]
+[2023-03-26 18:28:53,019] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2023-03-26 18:28:53,019] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.7]
+[2023-03-26 18:28:53,100] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2023-03-26 18:28:53,100] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [291] [INFO ] Root WebApplicationContext: initialization completed in 2248 ms
+[2023-03-26 18:28:53,361] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-03-26 18:28:53,455] [org.hibernate.Version] [restartedMain] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-03-26 18:28:53,806] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-26 18:28:54,299] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75632928
+[2023-03-26 18:28:54,301] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-26 18:28:54,359] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-03-26 18:28:54,846] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-26 18:28:54,864] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-26 18:28:54,948] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [231] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-03-26 18:28:54,979] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] [restartedMain] [87] [WARN ] 
+
+Using generated security password: fb3df540-51c7-45bf-8945-1cb4c79c39fc
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2023-03-26 18:28:55,450] [org.springframework.security.web.DefaultSecurityFilterChain] [restartedMain] [54] [INFO ] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7e9c4271, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3245ac29, org.springframework.security.web.context.SecurityContextHolderFilter@1d6280c0, org.springframework.security.web.header.HeaderWriterFilter@2a76940d, org.springframework.web.filter.CorsFilter@6e05dde2, org.springframework.security.web.authentication.logout.LogoutFilter@45e1e70b, br.com.training.springSecurity.config.security.FilterSecurity@32124443, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c5ca88c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@61d48608, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e0117ba, org.springframework.security.web.access.ExceptionTranslationFilter@663d757b, org.springframework.security.web.access.intercept.AuthorizationFilter@74f9a011]
+[2023-03-26 18:28:55,765] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2023-03-26 18:28:55,783] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting ProtocolHandler ["http-nio-8080"]
+[2023-03-26 18:28:55,813] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [220] [INFO ] Tomcat started on port(s): 8080 (http) with context path ''
+[2023-03-26 18:28:55,827] [org.springframework.boot.StartupInfoLogger] [restartedMain] [57] [INFO ] Started SpringSecurityApplication in 5.662 seconds (process running for 6.809)
+[2023-03-26 18:29:07,725] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-2] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-03-26 18:29:07,726] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-2] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2023-03-26 18:29:07,727] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-2] [554] [INFO ] Completed initialization in 1 ms
+[2023-03-26 18:29:07,761] [br.com.training.springSecurity.config.security.FilterSecurity] [http-nio-8080-exec-2] [21] [INFO ] Requisição passou pelo filtro de segurança
+[2023-03-26 18:29:47,975] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-26 18:29:47,979] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-26 18:29:47,988] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-26 18:29:53,108] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [INFO ] Starting SpringSecurityApplication using Java 17.0.1 with PID 24544 (C:\Users\danie\Documents\Daniel_Diniz\java\prof-isidro\springSecurity\target\classes started by danie in C:\Users\danie\Documents\Daniel_Diniz\java\prof-isidro\springSecurity)
+[2023-03-26 18:29:53,113] [org.springframework.boot.SpringApplication] [restartedMain] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-26 18:29:53,194] [org.springframework.boot.logging.DeferredLog] [restartedMain] [250] [INFO ] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-03-26 18:29:53,194] [org.springframework.boot.logging.DeferredLog] [restartedMain] [250] [INFO ] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-03-26 18:29:54,273] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-03-26 18:29:54,316] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [208] [INFO ] Finished Spring Data repository scanning in 28 ms. Found 0 JPA repository interfaces.
+[2023-03-26 18:29:55,291] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [108] [INFO ] Tomcat initialized with port(s): 8080 (http)
+[2023-03-26 18:29:55,307] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing ProtocolHandler ["http-nio-8080"]
+[2023-03-26 18:29:55,308] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2023-03-26 18:29:55,309] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.7]
+[2023-03-26 18:29:55,402] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2023-03-26 18:29:55,404] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [291] [INFO ] Root WebApplicationContext: initialization completed in 2208 ms
+[2023-03-26 18:29:55,707] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-03-26 18:29:55,785] [org.hibernate.Version] [restartedMain] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-03-26 18:29:56,159] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-26 18:29:56,734] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d5d201
+[2023-03-26 18:29:56,740] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-26 18:29:56,828] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-03-26 18:29:57,641] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-26 18:29:57,668] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-26 18:29:57,839] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [231] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-03-26 18:29:57,904] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] [restartedMain] [87] [WARN ] 
+
+Using generated security password: 5de9cc12-e988-4fa2-a8a0-d6d141f28d48
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2023-03-26 18:29:58,771] [org.springframework.security.web.DefaultSecurityFilterChain] [restartedMain] [54] [INFO ] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3a884aec, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a741bc4, org.springframework.security.web.context.SecurityContextHolderFilter@18834889, org.springframework.security.web.header.HeaderWriterFilter@1fdfb30, org.springframework.web.filter.CorsFilter@4747c948, org.springframework.security.web.authentication.logout.LogoutFilter@3ddc16eb, br.com.training.springSecurity.config.security.FilterSecurity@27bfd061, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@665b2e5f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d58f9d4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f982150, org.springframework.security.web.access.ExceptionTranslationFilter@4059d6fc, org.springframework.security.web.access.intercept.AuthorizationFilter@25014edc]
+[2023-03-26 18:29:59,346] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2023-03-26 18:29:59,369] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting ProtocolHandler ["http-nio-8080"]
+[2023-03-26 18:29:59,422] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [220] [INFO ] Tomcat started on port(s): 8080 (http) with context path ''
+[2023-03-26 18:29:59,440] [org.springframework.boot.StartupInfoLogger] [restartedMain] [57] [INFO ] Started SpringSecurityApplication in 6.859 seconds (process running for 8.029)
+[2023-03-26 18:30:03,693] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-03-26 18:30:03,695] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2023-03-26 18:30:03,700] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [554] [INFO ] Completed initialization in 5 ms
+[2023-03-26 18:30:03,789] [br.com.training.springSecurity.config.security.FilterSecurity] [http-nio-8080-exec-1] [21] [INFO ] Requisição passou pelo filtro de segurança
+[2023-03-26 18:30:03,803] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] [175] [ERROR] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+org.springframework.web.util.pattern.PatternParseException: No more pattern data allowed after {*...} or ** pattern element
+	at org.springframework.web.util.pattern.InternalPathPatternParser.peekDoubleWildcard(InternalPathPatternParser.java:250)
+	at org.springframework.web.util.pattern.InternalPathPatternParser.parse(InternalPathPatternParser.java:113)
+	at org.springframework.web.util.pattern.PathPatternParser.parse(PathPatternParser.java:117)
+	at org.springframework.web.servlet.handler.PathPatternMatchableHandlerMapping.lambda$match$0(PathPatternMatchableHandlerMapping.java:64)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.springframework.web.servlet.handler.PathPatternMatchableHandlerMapping.match(PathPatternMatchableHandlerMapping.java:62)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector$LookupPathMatchableHandlerMapping.match(HandlerMappingIntrospector.java:319)
+	at org.springframework.security.web.servlet.util.matcher.MvcRequestMatcher.matcher(MvcRequestMatcher.java:95)
+	at org.springframework.security.web.access.intercept.RequestMatcherDelegatingAuthorizationManager.check(RequestMatcherDelegatingAuthorizationManager.java:76)
+	at org.springframework.security.web.access.intercept.RequestMatcherDelegatingAuthorizationManager.check(RequestMatcherDelegatingAuthorizationManager.java:45)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:95)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at br.com.training.springSecurity.config.security.FilterSecurity.doFilterInternal(FilterSecurity.java:22)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2023-03-26 18:30:03,853] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] [175] [ERROR] Servlet.service() for servlet [dispatcherServlet] threw exception
+org.springframework.web.util.pattern.PatternParseException: No more pattern data allowed after {*...} or ** pattern element
+	at org.springframework.web.util.pattern.InternalPathPatternParser.peekDoubleWildcard(InternalPathPatternParser.java:250)
+	at org.springframework.web.util.pattern.InternalPathPatternParser.parse(InternalPathPatternParser.java:113)
+	at org.springframework.web.util.pattern.PathPatternParser.parse(PathPatternParser.java:117)
+	at org.springframework.web.servlet.handler.PathPatternMatchableHandlerMapping.lambda$match$0(PathPatternMatchableHandlerMapping.java:64)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.springframework.web.servlet.handler.PathPatternMatchableHandlerMapping.match(PathPatternMatchableHandlerMapping.java:62)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector$LookupPathMatchableHandlerMapping.match(HandlerMappingIntrospector.java:319)
+	at org.springframework.security.web.servlet.util.matcher.MvcRequestMatcher.matcher(MvcRequestMatcher.java:95)
+	at org.springframework.security.web.access.intercept.RequestMatcherDelegatingAuthorizationManager.check(RequestMatcherDelegatingAuthorizationManager.java:76)
+	at org.springframework.security.web.access.intercept.RequestMatcherDelegatingAuthorizationManager.check(RequestMatcherDelegatingAuthorizationManager.java:45)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:95)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:410)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:358)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:222)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:304)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:149)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2023-03-26 18:30:03,862] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] [175] [ERROR] Exception Processing ErrorPage[errorCode=0, location=/error]
+org.springframework.web.util.pattern.PatternParseException: No more pattern data allowed after {*...} or ** pattern element
+	at org.springframework.web.util.pattern.InternalPathPatternParser.peekDoubleWildcard(InternalPathPatternParser.java:250)
+	at org.springframework.web.util.pattern.InternalPathPatternParser.parse(InternalPathPatternParser.java:113)
+	at org.springframework.web.util.pattern.PathPatternParser.parse(PathPatternParser.java:117)
+	at org.springframework.web.servlet.handler.PathPatternMatchableHandlerMapping.lambda$match$0(PathPatternMatchableHandlerMapping.java:64)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.springframework.web.servlet.handler.PathPatternMatchableHandlerMapping.match(PathPatternMatchableHandlerMapping.java:62)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector$LookupPathMatchableHandlerMapping.match(HandlerMappingIntrospector.java:319)
+	at org.springframework.security.web.servlet.util.matcher.MvcRequestMatcher.matcher(MvcRequestMatcher.java:95)
+	at org.springframework.security.web.access.intercept.RequestMatcherDelegatingAuthorizationManager.check(RequestMatcherDelegatingAuthorizationManager.java:76)
+	at org.springframework.security.web.access.intercept.RequestMatcherDelegatingAuthorizationManager.check(RequestMatcherDelegatingAuthorizationManager.java:45)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:95)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:410)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:358)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:222)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:304)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:149)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2023-03-26 18:30:33,254] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-26 18:30:33,258] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-26 18:30:33,265] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-26 18:30:37,594] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [INFO ] Starting SpringSecurityApplication using Java 17.0.1 with PID 11804 (C:\Users\danie\Documents\Daniel_Diniz\java\prof-isidro\springSecurity\target\classes started by danie in C:\Users\danie\Documents\Daniel_Diniz\java\prof-isidro\springSecurity)
+[2023-03-26 18:30:37,599] [org.springframework.boot.SpringApplication] [restartedMain] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-26 18:30:37,678] [org.springframework.boot.logging.DeferredLog] [restartedMain] [250] [INFO ] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-03-26 18:30:37,678] [org.springframework.boot.logging.DeferredLog] [restartedMain] [250] [INFO ] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-03-26 18:30:38,689] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-03-26 18:30:38,741] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [208] [INFO ] Finished Spring Data repository scanning in 39 ms. Found 0 JPA repository interfaces.
+[2023-03-26 18:30:39,705] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [108] [INFO ] Tomcat initialized with port(s): 8080 (http)
+[2023-03-26 18:30:39,719] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing ProtocolHandler ["http-nio-8080"]
+[2023-03-26 18:30:39,720] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2023-03-26 18:30:39,721] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.7]
+[2023-03-26 18:30:39,796] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2023-03-26 18:30:39,797] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [291] [INFO ] Root WebApplicationContext: initialization completed in 2118 ms
+[2023-03-26 18:30:40,064] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-03-26 18:30:40,144] [org.hibernate.Version] [restartedMain] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-03-26 18:30:40,474] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-26 18:30:40,867] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1692030
+[2023-03-26 18:30:40,870] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-26 18:30:40,931] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-03-26 18:30:41,333] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-26 18:30:41,352] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-26 18:30:41,447] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [231] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-03-26 18:30:41,484] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] [restartedMain] [87] [WARN ] 
+
+Using generated security password: 1ef34f40-8eeb-4ef7-8060-9c6e18180825
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2023-03-26 18:30:41,972] [org.springframework.security.web.DefaultSecurityFilterChain] [restartedMain] [54] [INFO ] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1a4590a0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15a10105, org.springframework.security.web.context.SecurityContextHolderFilter@5dca7d49, org.springframework.security.web.header.HeaderWriterFilter@1933aeaa, org.springframework.web.filter.CorsFilter@1f679c91, org.springframework.security.web.authentication.logout.LogoutFilter@6c07ab8f, br.com.training.springSecurity.config.security.FilterSecurity@6fbb7d21, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@63ade2c2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d664570, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@594d30e6, org.springframework.security.web.access.ExceptionTranslationFilter@256cb8a4, org.springframework.security.web.access.intercept.AuthorizationFilter@6b05620]
+[2023-03-26 18:30:42,289] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2023-03-26 18:30:42,303] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting ProtocolHandler ["http-nio-8080"]
+[2023-03-26 18:30:42,334] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [220] [INFO ] Tomcat started on port(s): 8080 (http) with context path ''
+[2023-03-26 18:30:42,347] [org.springframework.boot.StartupInfoLogger] [restartedMain] [57] [INFO ] Started SpringSecurityApplication in 5.311 seconds (process running for 6.229)
+[2023-03-26 18:30:47,793] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-03-26 18:30:47,794] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2023-03-26 18:30:47,795] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [554] [INFO ] Completed initialization in 1 ms
+[2023-03-26 18:30:47,823] [br.com.training.springSecurity.config.security.FilterSecurity] [http-nio-8080-exec-1] [21] [INFO ] Requisição passou pelo filtro de segurança
+[2023-03-26 18:31:02,467] [br.com.training.springSecurity.config.security.FilterSecurity] [http-nio-8080-exec-4] [21] [INFO ] Requisição passou pelo filtro de segurança
