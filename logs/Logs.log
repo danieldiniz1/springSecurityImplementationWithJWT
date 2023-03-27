@@ -2377,3 +2377,43 @@ This generated password is for development use only. Your security configuration
 [2023-03-26 22:00:44,879] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
 [2023-03-26 22:00:44,883] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
 [2023-03-26 22:00:44,892] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.
+[2023-03-26 22:03:50,321] [org.springframework.boot.StartupInfoLogger] [restartedMain] [51] [INFO ] Starting SpringSecurityApplication using Java 17.0.1 with PID 19704 (C:\Users\danie\Documents\Daniel_Diniz\java\prof-isidro\springSecurity\target\classes started by danie in C:\Users\danie\Documents\Daniel_Diniz\java\prof-isidro\springSecurity)
+[2023-03-26 22:03:50,326] [org.springframework.boot.SpringApplication] [restartedMain] [638] [INFO ] The following 1 profile is active: "dev"
+[2023-03-26 22:03:50,414] [org.springframework.boot.logging.DeferredLog] [restartedMain] [250] [INFO ] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-03-26 22:03:50,416] [org.springframework.boot.logging.DeferredLog] [restartedMain] [250] [INFO ] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-03-26 22:03:51,646] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [138] [INFO ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-03-26 22:03:51,691] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [restartedMain] [208] [INFO ] Finished Spring Data repository scanning in 27 ms. Found 0 JPA repository interfaces.
+[2023-03-26 22:03:52,748] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [108] [INFO ] Tomcat initialized with port(s): 8080 (http)
+[2023-03-26 22:03:52,765] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing ProtocolHandler ["http-nio-8080"]
+[2023-03-26 22:03:52,767] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting service [Tomcat]
+[2023-03-26 22:03:52,767] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting Servlet engine: [Apache Tomcat/10.1.7]
+[2023-03-26 22:03:52,852] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Initializing Spring embedded WebApplicationContext
+[2023-03-26 22:03:52,853] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain] [291] [INFO ] Root WebApplicationContext: initialization completed in 2435 ms
+[2023-03-26 22:03:53,173] [org.hibernate.jpa.internal.util.LogHelper] [restartedMain] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-03-26 22:03:53,267] [org.hibernate.Version] [restartedMain] [44] [INFO ] HHH000412: Hibernate ORM core version 6.1.7.Final
+[2023-03-26 22:03:53,632] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [110] [INFO ] HikariPool-1 - Starting...
+[2023-03-26 22:03:54,112] [com.zaxxer.hikari.pool.HikariPool] [restartedMain] [565] [INFO ] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ef639c7
+[2023-03-26 22:03:54,115] [com.zaxxer.hikari.HikariDataSource] [restartedMain] [123] [INFO ] HikariPool-1 - Start completed.
+[2023-03-26 22:03:54,195] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl] [restartedMain] [66] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-03-26 22:03:55,241] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [restartedMain] [51] [INFO ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-26 22:03:55,252] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [restartedMain] [437] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-26 22:03:55,329] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [restartedMain] [231] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-03-26 22:03:55,361] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] [restartedMain] [87] [WARN ] 
+
+Using generated security password: 5217392e-ffb8-48df-b5a9-539c5fd068ab
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2023-03-26 22:03:55,900] [org.springframework.security.web.DefaultSecurityFilterChain] [restartedMain] [54] [INFO ] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@405de66a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@532e57f5, org.springframework.security.web.context.SecurityContextHolderFilter@6cace9c0, org.springframework.security.web.header.HeaderWriterFilter@90a1b36, org.springframework.web.filter.CorsFilter@13dc76ba, org.springframework.security.web.authentication.logout.LogoutFilter@3b7f804, br.com.training.springSecurity.config.security.FilterSecurity@6ee2fb12, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4226e9d0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a1d3828, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41232e12, org.springframework.security.web.access.ExceptionTranslationFilter@6799bbd4, org.springframework.security.web.access.intercept.AuthorizationFilter@a418d1f]
+[2023-03-26 22:03:56,213] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain] [59] [INFO ] LiveReload server is running on port 35729
+[2023-03-26 22:03:56,229] [org.apache.juli.logging.DirectJDKLog] [restartedMain] [173] [INFO ] Starting ProtocolHandler ["http-nio-8080"]
+[2023-03-26 22:03:56,262] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain] [220] [INFO ] Tomcat started on port(s): 8080 (http) with context path ''
+[2023-03-26 22:03:56,278] [org.springframework.boot.StartupInfoLogger] [restartedMain] [57] [INFO ] Started SpringSecurityApplication in 6.629 seconds (process running for 7.801)
+[2023-03-26 22:04:00,729] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-2] [173] [INFO ] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-03-26 22:04:00,730] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-2] [532] [INFO ] Initializing Servlet 'dispatcherServlet'
+[2023-03-26 22:04:00,731] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-2] [554] [INFO ] Completed initialization in 1 ms
+[2023-03-26 22:04:00,754] [br.com.training.springSecurity.config.security.FilterSecurity] [http-nio-8080-exec-2] [25] [INFO ] Requisição passou pelo filtro de segurança
+[2023-03-26 22:04:00,755] [br.com.training.springSecurity.config.security.FilterSecurity] [http-nio-8080-exec-2] [27] [INFO ] Bearer Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaXNzIjoiU2lzdGVtMzIiLCJleHAiOjE2Nzk4Nzg4NDJ9.1vBx4vBmOdzA0V-2az7Dge3z9lfdD3o2343akOisizc
+[2023-03-26 22:04:39,526] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [SpringApplicationShutdownHook] [650] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-03-26 22:04:39,530] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+[2023-03-26 22:04:39,539] [com.zaxxer.hikari.HikariDataSource] [SpringApplicationShutdownHook] [352] [INFO ] HikariPool-1 - Shutdown completed.

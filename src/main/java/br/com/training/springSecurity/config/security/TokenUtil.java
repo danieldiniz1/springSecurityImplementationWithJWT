@@ -34,17 +34,21 @@ public class TokenUtil {
     }
 
     public static Authentication decodeToken(HttpServletRequest request) {
-        String jwtToken = request.getHeader("Authorization");
-        jwtToken = jwtToken.replace(TOKEN_HEADER, "");
+        try {
+            String jwtToken = request.getHeader("Authorization");
+            jwtToken = jwtToken.replace(TOKEN_HEADER, "");
 
-        //leitura do token(parse)
-        Jws<Claims> jwsClaims = Jwts.parserBuilder().setSigningKey(TOKEN_KEY.getBytes()).build().parseClaimsJws(jwtToken);
+            //leitura do token(parse)
+            Jws<Claims> jwsClaims = Jwts.parserBuilder().setSigningKey(TOKEN_KEY.getBytes()).build().parseClaimsJws(jwtToken);
 
-        String usuario = jwsClaims.getBody().getSubject();
-        String emissor = jwsClaims.getBody().getIssuer();
-        Date expiration = jwsClaims.getBody().getExpiration();
-        if (usuario.length() > 0 && emissor.equals(EMISSOR) && expiration.after(new Date(System.currentTimeMillis())))
-            return new UsernamePasswordAuthenticationToken("user", null, Collections.emptyList());
+            String usuario = jwsClaims.getBody().getSubject();
+            String emissor = jwsClaims.getBody().getIssuer();
+            Date expiration = jwsClaims.getBody().getExpiration();
+            if (usuario.length() > 0 && emissor.equals(EMISSOR) && expiration.after(new Date(System.currentTimeMillis())))
+                return new UsernamePasswordAuthenticationToken("user", null, Collections.emptyList());
+        } catch (Exception e){
+            e.printStackTrace();
+        }
         return null;
     }
 }
