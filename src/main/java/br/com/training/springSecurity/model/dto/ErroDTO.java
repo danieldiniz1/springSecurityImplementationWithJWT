@@ -1,4 +1,4 @@
-package br.com.training.springSecurity.model;
+package br.com.training.springSecurity.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,9 +10,9 @@ import java.time.LocalDateTime;
 public class ErroDTO {
     private Integer status;
     private String message;
-//    private LocalDateTime timeStamp;
+    private String timeStamp;
 
     public static ErroDTO valueOf(Integer status,String message){
-        return new ErroDTO(status,message);
+        return new ErroDTO(status,message,LocalDateTime.now().toString());
     }
 }

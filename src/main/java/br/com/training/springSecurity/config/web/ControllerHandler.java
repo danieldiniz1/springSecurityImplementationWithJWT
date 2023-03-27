@@ -1,7 +1,7 @@
 package br.com.training.springSecurity.config.web;
 
 import br.com.training.springSecurity.exception.AuthorizationException;
-import br.com.training.springSecurity.model.ErroDTO;
+import br.com.training.springSecurity.model.dto.ErroDTO;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

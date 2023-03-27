@@ -1,7 +1,6 @@
 package br.com.training.springSecurity.config.security;
 
-import br.com.training.springSecurity.exception.AuthorizationException;
-import br.com.training.springSecurity.model.ErroDTO;
+import br.com.training.springSecurity.model.dto.ErroDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
